@@ -76,6 +76,20 @@ console.log(lastCar.car_make,lastCar.car_model);
 let carModels = [];
 console.log();
 
+let sortInv = inventory.sort( (obj1,obj2) => (obj1.car_model > obj2.car_model) ? 1 : -1 );
+
+console.log(sortInv);
+
+for (let i = 0; i < sortInv.length; i++) {
+    carModels.push(sortInv[i].car_model);
+}
+
+console.log(carModels);
+
+
+
+
+
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
 let carYears = [];
